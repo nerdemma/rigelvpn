@@ -4,7 +4,7 @@
 ![Linux](https://img.shields.io/badge/Platform-Linux%20Debian%2013-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![OpenSSL](https://img.shields.io/badge/Crypto-OpenSSL%20EVP-721412?style=for-the-badge&logo=openssl&logoColor=white)
 ![Network](https://img.shields.io/badge/Protocol-UDP%20%2F%20TUN-002244?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![License](https://img.shields.io/badge/License-GPL-green?style=for-the-badge)
 
 **RigelVPN** es un prototipo completamente funcional de una **VPN de Capa 3 (L3)** autocontenida y de alto rendimiento, desarrollada en **C puro** para entornos **Linux**. 
 
@@ -56,7 +56,7 @@ El flujo de información atraviesa el siguiente ciclo cifrado desde la aplicaci�
     ├── 6. C / write(tun_fd) inyecta paquete IP al Kernel
     ▼
 [ Servidor (10.0.0.1) / Enrutamiento a Internet ]
-
+```
 🛠️ Requisitos del Sistema
 
     Sistema Operativo: Linux (Probado y optimizado para Debian 13 / Ubuntu 22.04+).
@@ -74,23 +74,23 @@ El flujo de información atraviesa el siguiente ciclo cifrado desde la aplicaci�
     Clonar el repositorio:
     Bash
 
-''git clone [https://github.com/tu-usuario/rigelvpn.git](https://github.com/tu-usuario/rigelvpn.git)
-''cd rigelvpn
+```git clone [https://github.com/tu-usuario/rigelvpn.git](https://github.com/tu-usuario/rigelvpn.git)
+```cd rigelvpn
 
 Instalar dependencias necesarias (Debian/Ubuntu):
 Bash
 
-''sudo apt update
-''sudo apt install -y build-essential libssl-dev iproute2
+```sudo apt update
+```sudo apt install -y build-essential libssl-dev iproute2
 
 Compilar manualmente:
 Bash
 
-    ''# Compilar el Cliente
-    ''gcc -Wall -Wextra -o src/client src/client.c -lcrypto
+    ```# Compilar el Cliente
+    ```gcc -Wall -Wextra -o src/client src/client.c -lcrypto
 
-    ''# Compilar el Servidor
-    ''gcc -Wall -Wextra -o src/server src/server.c -lcrypto
+    ```# Compilar el Servidor
+    ```gcc -Wall -Wextra -o src/server src/server.c -lcrypto
 
 🧪 Pruebas Automatizadas (Test Suite)
 
@@ -99,7 +99,7 @@ El repositorio incluye un script de prueba automatizado (test_vpn.sh) que no sol
 Para ejecutar las pruebas funcionales:
 Bash
 
-''sudo ./test_vpn.sh
+```sudo ./test_vpn.sh
 
 El script realizará las siguientes acciones de forma limpia:
 
@@ -130,6 +130,7 @@ rigelvpn/
 
 📜 Licencia
 
-Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+Este proyecto está bajo la Licencia GPL. Consulta el archivo LICENSE para más detalles.
+
 
 Desarrollado como proyecto personal de ingeniería de software para demostrar programación de bajo nivel en C, manipulación de paquetes IP y criptografía aplicada.
